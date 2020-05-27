@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<?import javafx.scene.layout.HBox?><!-- fxml에서는 <?~~~>이렇게 써야함  -->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?> <!-- Insets을 자동 완성을 쓰니 자동으로 import됨 -->
+
+<HBox xmlns:fx="http://javafx.com/fxml"><!--HBox를 선언함, http://javafx.com/fxml/1 여기에 규칙 정의되어 있다-->
+	<padding><!-- 여는 값 -->
+		<!-- <Insets topRightBottomLeft="10.0"/> --> <!-- 닫는 태그 '</Insets>'이 필요하지만 한번에 닫히면 바로 '/>'하면 된다 -->
+		<Insets top="10.0" right="10.0" bottom="10.0" left="10.0"/> 
+	</padding><!-- 닫는값-->
+	<spacing>10</spacing> <!-- =<spacing 10/>, setSpacing(10)에서 set빼고 쓰면됨 -->
+	<children>
+	<TextField prefWidth="200"/>
+	<Button text="확인"/>
+	</children>
+</HBox> <!--HBox root = new HBox(); 의미함-->
+
