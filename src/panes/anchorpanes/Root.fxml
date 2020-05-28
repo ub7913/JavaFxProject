@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="150.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Label layoutX="42.0" layoutY="28.0" text="아이디" />
+      <Label layoutX="42.0" layoutY="66.0" text="패스워드" />
+      <TextField layoutX="120.0" layoutY="24.0" />
+      <Button layoutX="97.0" layoutY="106.0" mnemonicParsing="false" text="로그인" />
+      <Button layoutX="164.0" layoutY="106.0" mnemonicParsing="false" text="취소" />
+      <PasswordField layoutX="120.0" layoutY="62.0" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
+<!-- scene builder로 다 만들고 저장 해서 여기 클릭하니까 코드가 자동완성됨 -->

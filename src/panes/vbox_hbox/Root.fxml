@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.*?> <!-- layout 밑에 있는 클래스를 모두 쓰겠다는 의미<?import javafx.scene.layout.VBox?>,<?import 
+	javafx.scene.layout.HBox?> 생략가능 -->
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import java.lang.Double?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1">
+	<padding>
+		<Insets topRightBottomLeft="10"></Insets> <!-- 여백을 줌 -->
+	</padding>
+
+	<children>
+		<ImageView fitWidth="200" preserveRatio="true"> <!-- fitWidth설정, preserveRatio="true" : fitWidth를 기준으로 비율을 맞춰줌 -->
+			<image>
+				<Image url="@../images/javafx.jpg" />
+			</image>
+		</ImageView>
+
+		<HBox alignment="CENTER" spacing="20"> <!-- alignment="CENTER": 컨트롤을 가운데정렬 spacing="20": 컨트롤사이 간격  -->
+			<children>
+				<Button text="이전" />
+				<Button text="다음">
+					<HBox.hgrow>
+						<Priority fx:constant="ALWAYS" /> <!--Priority는 제한된 값(ex.요일)만 받을 수 있는 열거형 타입 , always는 hbox가 늘어나면 같이 컨트롤도 늘어나게 한다-->
+					</HBox.hgrow>
+					<maxWidth>
+						<Double fx:constant="MAX_VALUE" /> <!-- HBox의 크기만큼 컨트롤 크기를 키우겠다 -->
+					</maxWidth>
+				</Button>
+			</children>	
+			<VBox.margin>
+				<Insets top="10"></Insets>
+			</VBox.margin>
+		</HBox>
+	</children>
+</VBox>
+
