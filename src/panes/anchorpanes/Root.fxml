@@ -7,8 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<!-- scene builder로 다 만들고 저장 해서 여기 클릭하니까 코드가 자동완성됨 -->
 
-<AnchorPane prefHeight="150.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="42.0" layoutY="28.0" text="아이디" />
       <Label layoutX="42.0" layoutY="66.0" text="패스워드" />
@@ -21,4 +22,3 @@
       <Insets />
    </opaqueInsets>
 </AnchorPane>
-<!-- scene builder로 다 만들고 저장 해서 여기 클릭하니까 코드가 자동완성됨 -->
