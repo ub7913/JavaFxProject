@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" 
+	fx:controller="fxml.ButtonController" 
+	prefHeight="50" prefWidth="300" 
+	alignment="CENTER" spacing="20"> <!-- 이 UI에 해당하는 파일은 ButtonController임을 지정  --><!-- 크기 높이 컨트롤 사이 간격 조절 -->
+	
+	<Button fx:id="btnNew" text="New"/>
+	<Button fx:id="btnOpen" text="Open"/>
+	<Button fx:id="btnSave" text="Save" onAction="#btnSaveAction"/> 
+	<!--<Button fx:id="btnSave" text="Save"/>-->
+</HBox>
+

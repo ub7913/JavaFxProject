@@ -13,7 +13,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-public class AppMain extends Application {
+public class AppMain extends Application { //main class Root.fxml을 호출 해 윈도우 창을 만드는 역할
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -24,7 +24,7 @@ public class AppMain extends Application {
 
 		TextField textField = new TextField();
 		textField.setPrefWidth(200);
-		textField.setPrefHeight(200);
+		textField.setPrefHeight(100);
 
 		Button button = new Button();
 		button.setText("확인");
