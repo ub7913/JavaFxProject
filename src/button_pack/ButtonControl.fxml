@@ -7,29 +7,46 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="289.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="button_pack.ButtonController">
+<BorderPane prefHeight="150.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="button_pack.ButtonController">
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
    <center>
-      <HBox fx:id="hbox" prefHeight="269.0" prefWidth="277.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="hbox" prefHeight="246.0" prefWidth="497.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefHeight="100.0" prefWidth="200.0">
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20">
                <children>
-                  <CheckBox mnemonicParsing="false" text="CheckBox" />
-                  <CheckBox mnemonicParsing="false" text="CheckBox" />
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-               </children></VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0">
+                  <CheckBox fx:id="chk1"  text="안경"  /> <!-- onAction="#handleCheckAction" 생략하고 ButtonController.java에서 setOnAction을 이용해서 코드를 만들 수 있다.-->
+                  <CheckBox fx:id="chk2"  text="모자"  /> <!-- ButtonController에서 액션에 대한 정의가 없어서 에러표시가 뜸(public으로 해줄 것) -->
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></VBox>
+            <ImageView fx:id="imageView"  fitWidth="135.0"  preserveRatio="true">
+               <image>
+                  <Image url="@../images/geek.gif" />
+               </image>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="246.0" prefWidth="6.0" />
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20">
+            	<fx:define><!-- radio button을 하나만 선택하게 하는 그룹을 만듬 -->
+            		<ToggleGroup fx:id="group"/>
+            	</fx:define>
                <children>
-                  <RadioButton mnemonicParsing="false" text="RadioButton" />
-                  <RadioButton mnemonicParsing="false" text="RadioButton" />
+                  <RadioButton toggleGroup="$group" fx:id="rad1" userData="BubbleChart" text="BubbleChart" selected="true"/>
+                  <RadioButton toggleGroup="$group" fx:id="rad2" userData="BarChart" text="BarChart" />
+                  <RadioButton toggleGroup="$group" fx:id="rad3" userData="AreaChart" text="AreaChart" />
                </children>
             </VBox>
+            <ImageView  fx:id="imageView2" fitWidth="100.0"  preserveRatio="true">
+               <image>
+                  <Image url="@../images/BubbleChart.png" />
+               </image>
+            </ImageView>
          </children>
       </HBox>
    </center>
    <bottom>
-      <Button mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER" />
+      <Button fx:id ="exitbtn" text="Button" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>
