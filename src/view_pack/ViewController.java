@@ -57,7 +57,7 @@ public class ViewController implements Initializable {
 		TableColumn<Phone, ?> tcImage=tableView.getColumns().get(1);//getColumns().get(1):두번째 칼럼에 연결
 		tcImage.setCellValueFactory(new PropertyValueFactory("image"));//image의 속성값을 칼럼에 두번째 칼럼에 연결함
 		
-		tableView.getSelectionModel().selectedItemProperty()
+		tableView.getSelectionModel().selectedItemProperty()//ItemProperty:한건에 대한 속성을 리턴 해줌
 		.addListener(new ChangeListener<Phone>() {
 
 			@Override

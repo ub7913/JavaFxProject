@@ -9,12 +9,12 @@ public class Board {
 	private SimpleStringProperty exitDate;
 	private SimpleStringProperty content; //생성자 겟셋메소드와 property메소드 만들기
 	
-	Board(String title, String password, String publicity, String exitDate, String content) {
+	public Board(String title, String password, String publicity, String exitDate, String content) {
 		this.title=new SimpleStringProperty(title);
-		this.title=new SimpleStringProperty(password);
-		this.title=new SimpleStringProperty(publicity);
-		this.title=new SimpleStringProperty(exitDate);
-		this.title=new SimpleStringProperty(content);
+		this.password=new SimpleStringProperty(password);
+		this.publicity=new SimpleStringProperty(publicity);
+		this.exitDate=new SimpleStringProperty(exitDate);
+		this.content=new SimpleStringProperty(content);
 	}
 	
 	public void setTitle(String title) {
