@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -87,8 +88,9 @@ public class BoardController implements Initializable {
 
 			@Override
 			public void handle(ActionEvent arg0) {
-				
-				
+				Integer curretIndex = tableView.getSelectionModel().getSelectedIndex();
+				tableView.getSelectionModel().select(curretIndex-1);
+				System.out.println(curretIndex);
 			}
 			
 		});
