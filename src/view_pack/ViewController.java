@@ -36,7 +36,7 @@ public class ViewController implements Initializable {
 
 			@Override
 			public void changed(ObservableValue<? extends Number> observable, Number oldVal, Number newVal) {
-				tableView.getSelectionModel().select(newVal.intValue());//Number 클래스에 intValue()라는 메소드가 있어 인트타입으로 바꿔준다.
+				tableView.getSelectionModel().select(newVal.intValue());//Number 클래스에 intValue()라는 메소드가 있어 인트타입으로 바꿔준다.intValue():소수점을 정수로 바꿔주는 메소드
 				tableView.scrollTo(newVal.intValue());//해당하는 위치로 스크롤이 내려간다.
 			}
 		});//선택된 값을 읽어 오는 메소드,api에 가면 인덱스와 아이템을 가져와 읽는 방식 두가지가 있다.selectedIndex의 
