@@ -78,7 +78,7 @@ public class InputController implements Initializable {
 			messagePopup("내용을 입력하세요");
 		} else { //디비입력
 			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-			String sql = "insert into board(title,password,publicity,exit_date,content)"
+			String sql = "insert into board1(title,password,publicity,exit_date,content)"
 				+ "values(?,?,?,?,?)";
 			try {//예외처리 필요
 				PreparedStatement pstmt = conn.prepareStatement(sql);

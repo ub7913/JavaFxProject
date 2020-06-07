@@ -98,7 +98,7 @@ public class BoardController implements Initializable {
 	
 	public ObservableList<Board> getBoardList() {
 		ObservableList<Board> list = FXCollections.observableArrayList();
-		String sql = "select title, publicity, exit_date, content from board";
+		String sql = "select title, publicity, exit_date, content from board1";
 		try {
 			PreparedStatement pstmt= conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
