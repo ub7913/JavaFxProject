@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+	<padding>
+		<Insets topRightBottomLeft="20" />
+	</padding>
+	<center>
+		<GridPane BorderPane.alignment="CENTER" hgap="10" vgap="10">
+			<Label text="도서코드" prefWidth="50" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+			<Label text="도서명" prefWidth="50" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+			<Label text="저자" prefWidth="50" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+			<Label text="단가" prefWidth="50" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+			<Label text="판매량" prefWidth="50" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+			<TextField id="txtCode" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+			<TextField id="txtTitle" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+			<TextField id="txtName" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+			<TextField id="txtPrice" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+			<TextField id="txtSell" prefWidth="100" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+		</GridPane>
+	</center>
+	<bottom>
+		<HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" spacing="20">
+			<BorderPane.margin>
+				<Insets topRightBottomLeft="10" />
+			</BorderPane.margin>
+			<children>
+				<Button id="btnFormAdd" text="입력" />
+				<Button id="btnFormCancel" text="취소" />
+			</children>
+		</HBox>
+	</bottom>
+</BorderPane>
+
