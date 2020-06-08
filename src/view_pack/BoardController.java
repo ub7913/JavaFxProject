@@ -95,6 +95,27 @@ public class BoardController implements Initializable {
 			
 		});
 		
+		b.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				Integer currentIndex = tableView.getSelectionModel().getSelectedIndex();
+				tableView.getSelectionModel().select(currentIndex+1);
+			}
+			
+		});
+		
+		c.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				String sql = "Update board set"+setContent()+"where title";
+			}
+			
+		});
+
+		
+		
 		tableView.setItems(boardList);
 	} // end of Initialize()
 	
