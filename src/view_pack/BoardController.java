@@ -51,7 +51,7 @@ public class BoardController implements Initializable {
 		
 		ObservableList<Board> boardList = getBoardList(); //FXCollections.observableArrayList();
 		
-		boardList.add(new Board("test","1234","공개","2020/06/04","내용ㅇ...."));
+		//boardList.add(new Board("test","1234","공개","2020/06/04","내용ㅇ...."));
 		
 		TableColumn<Board, String> tcTitle = new TableColumn<Board, String>();//새로운 칼럼을 정의해서 해서 연결
 		tcTitle.setCellValueFactory(new Callback<CellDataFeatures<Board, String>, ObservableValue<String>>() {
@@ -59,7 +59,6 @@ public class BoardController implements Initializable {
 			@Override
 			public ObservableValue<String> call(CellDataFeatures<Board, String> param) {
 				return param.getValue().titleProperty();
-				
 			}
 			
 		});
@@ -76,6 +75,10 @@ public class BoardController implements Initializable {
 
 			@Override
 			public void changed(ObservableValue<? extends Board> observable, Board oldVal, Board newVal) {
+				if (newVal == null) {
+					return;
+				}
+				
 				title.setText(newVal.getTitle());
 				publicity.setValue(newVal.getPublicity());
 				exitDate.setText(newVal.getExitDate());
@@ -107,14 +110,21 @@ public class BoardController implements Initializable {
 		
 		c.setOnAction(new EventHandler<ActionEvent>() {
 
-			@Override
-			public void handle(ActionEvent arg0) {
-				String sql = "Update board set"+setContent()+"where title";
+			public void handle(ActionEvent event) {
+				String sql = "update board1 set content =? where title=?";
+				
+				try {
+					PreparedStatement pstmt= conn.prepareStatement(sql);
+					pstmt.setString(1, content.getText());
+					pstmt.setString(2, title.getText());
+					pstmt.executeUpdate();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+				tableView.setItems(getBoardList());
 			}
-			
 		});
 
-		
 		
 		tableView.setItems(boardList);
 	} // end of Initialize()
@@ -135,6 +145,18 @@ public class BoardController implements Initializable {
 		}
 		return list;
 	} // end of getBoardList()
+	
+//	public void modifyBoard(Board brd) {
+//		String sql = "update board set content =? where title=?;";
+//		
+//		try {
+//			PreparedStatement pstmt= conn.prepareStatement(sql);
+//			pstmt.setString(1, brd.getContent());
+//			pstmt.setString(2, "title");
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 }
 
