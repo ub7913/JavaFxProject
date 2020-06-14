@@ -111,7 +111,7 @@ public class BoardController implements Initializable {
 		c.setOnAction(new EventHandler<ActionEvent>() {
 
 			public void handle(ActionEvent event) {
-				String sql = "update board set content =? where title=?";
+				String sql = "update board1 set content =? where title=?";
 				
 				try {
 					PreparedStatement pstmt= conn.prepareStatement(sql);
@@ -131,7 +131,7 @@ public class BoardController implements Initializable {
 	
 	public ObservableList<Board> getBoardList() {
 		ObservableList<Board> list = FXCollections.observableArrayList();
-		String sql = "select title, publicity, exit_date, content from board";
+		String sql = "select title, publicity, exit_date, content from board1";
 		try {
 			PreparedStatement pstmt= conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
