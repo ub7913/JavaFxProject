@@ -50,7 +50,7 @@
          </children>
       </Pane>
       <Button fx:id="btnAdd" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#handleBtn" text="추가" />
-      <Button fx:id="btnDelete" layoutX="90.0" layoutY="13.0" mnemonicParsing="false" text="삭제" onAction="#DeleteList"/>
+      <Button fx:id="btnDelete" layoutX="90.0" layoutY="13.0" mnemonicParsing="false" text="삭제" /> <!-- onAction="#DeleteList" -->
       <TextField fx:id="txtSearch" layoutX="266.0" layoutY="13.0" prefHeight="23.0" prefWidth="124.0" />
       <Label layoutX="184.0" layoutY="17.0" text="이름검색" />
       <Button fx:id="btnSearch" layoutX="409.0" layoutY="13.0" mnemonicParsing="false" text="검색"  /> <!-- onAction="#SearchList" -->

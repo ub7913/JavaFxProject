@@ -1,4 +1,4 @@
-package test2;
+package project1Copy;
 
 import java.io.IOException;
 import java.net.URL;
@@ -52,8 +52,8 @@ public class RegistController implements Initializable {
 			e.printStackTrace();
 		}
 		
-		ObservableList<Regist> RegistList;
-		RegistList=getRegistList();
+		ObservableList<Regist> RegistList = getRegistList();
+		
 		
 		TableColumn<Regist, String> tcId = new TableColumn<>();
 		tcId.setCellValueFactory(new PropertyValueFactory<Regist, String>("id"));
@@ -85,7 +85,7 @@ public class RegistController implements Initializable {
 		});
 		//tableView.setItems(SearchList());
 		tableView.setItems(RegistList);
-		tableView.setItems(DeleteList());
+//		tableView.setItems(DeleteList());
 		
 		
 //		TableColumn<Regist, String> tcId = new TableColumn<Regist, String>();
@@ -111,7 +111,7 @@ public class RegistController implements Initializable {
 //		} else if (event.getSource() == btnSearch) {
 //			SerachList();
 		} else if (event.getSource() == btnDelete) {
-			DeleteList();
+//			DeleteList();
 		}
 	}
 	
@@ -150,26 +150,26 @@ public class RegistController implements Initializable {
 //		return list;
 //	}
 	
-	public ObservableList<Regist> DeleteList() {
-		String sql = "delete from registration1 where id=?";
-		ObservableList<Regist> list = FXCollections.observableArrayList();
-		try {
-			PreparedStatement pstmt= conn.prepareStatement(sql);
-			ResultSet rs = pstmt.executeQuery();
-			pstmt.setString(1, txtNum.getText());
-			pstmt.executeUpdate();
-			while(rs.next()) {
-				Regist regist = new Regist(rs.getInt("id"), rs.getString("pet_name"), rs.getInt("pet_age"),
-						   rs.getString("pet_birthdate"), rs.getString("pet_gender"), rs.getString("pet_breed"),
-						   rs.getInt("pet_weight"), rs.getString("pet_nuet"), rs.getString("host_name"), rs.getInt("host_phone"),
-						   rs.getString("image"), rs.getString("cur_date"));
-				list.add(regist);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return list;
+//	public ObservableList<Regist> DeleteList() {
+//		String sql = "delete from registration1 where id=?";
+//		ObservableList<Regist> list = FXCollections.observableArrayList();
+//		try {
+//			PreparedStatement pstmt= conn.prepareStatement(sql);
+//			ResultSet rs = pstmt.executeQuery();
+//			pstmt.setString(1, txtNum.getText());
+//			pstmt.executeUpdate();
+//			while(rs.next()) {
+//				Regist regist = new Regist(rs.getInt("id"), rs.getString("pet_name"), rs.getInt("pet_age"),
+//						   rs.getString("pet_birthdate"), rs.getString("pet_gender"), rs.getString("pet_breed"),
+//						   rs.getInt("pet_weight"), rs.getString("pet_nuet"), rs.getString("host_name"), rs.getInt("host_phone"),
+//						   rs.getString("image"), rs.getString("cur_date"));
+//				list.add(regist);
+//			}
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//		return list;
 		
-	}
+//	}
 	
 }

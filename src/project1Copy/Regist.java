@@ -1,4 +1,4 @@
-package test2;
+package project1Copy;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
