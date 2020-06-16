@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="539.0" prefWidth="929.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pet.RegistController">
+   <children>
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="55.0" prefHeight="456.0" prefWidth="435.0">
+         <columns>
+            <TableColumn prefWidth="52.0" text="번호" />
+            <TableColumn prefWidth="105.0" text="이름" />
+            <TableColumn prefWidth="110.0" text="보호자이름" />
+            <TableColumn prefWidth="167.0" text="등록일" />
+         </columns></TableView>
+      <Separator layoutX="469.0" layoutY="24.0" orientation="VERTICAL" prefHeight="497.0" prefWidth="6.0" />
+      <Pane layoutX="486.0" layoutY="114.0">
+         <children>
+            <TextField fx:id="txtName" layoutX="62.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="124.0" />
+            <Label layoutY="4.0" text="이름" />
+         </children>
+      </Pane>
+      <Pane layoutX="704.0" layoutY="231.0">
+         <children>
+            <TextField fx:id="txtBreed" layoutX="62.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="124.0" />
+            <Label layoutY="4.0" text="견종" />
+         </children>
+      </Pane>
+      <Pane layoutX="486.0" layoutY="165.0">
+         <children>
+            <Label layoutX="2.0" layoutY="12.0" text="나이" />
+            <TextField fx:id="txtAge" layoutX="62.0" layoutY="8.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="124.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="487.0" layoutY="231.0">
+         <children>
+            <Label layoutY="4.0" text="몸무게" />
+            <Label layoutX="173.0" layoutY="4.0" text="kg" />
+            <TextField fx:id="txtWeight" layoutX="103.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="60.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="488.0" layoutY="288.0" />
+      <Pane layoutX="488.0" layoutY="344.0">
+         <children>
+            <ComboBox fx:id="comboGender" layoutX="108.0" prefHeight="23.0" prefWidth="78.0" />
+            <Label layoutY="4.0" text="애견성별" />
+         </children>
+      </Pane>
+      <Pane layoutX="704.0" layoutY="344.0">
+         <children>
+            <Label layoutY="4.0" text="중성화여부" />
+            <ComboBox fx:id="comboNuet" layoutX="108.0" prefHeight="23.0" prefWidth="78.0" />
+         </children>
+      </Pane>
+      <Button fx:id="btnAdd" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#handleBtn" text="추가" />
+      <Button fx:id="btnDelete" layoutX="90.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#handleBtn" text="삭제" /> <!-- onAction="#DeleteList" -->
+      <TextField fx:id="txtSearch" layoutX="266.0" layoutY="13.0" prefHeight="23.0" prefWidth="124.0" />
+      <Label layoutX="184.0" layoutY="17.0" text="이름검색" />
+      <Button fx:id="btnSearch" layoutX="409.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#handleBtn" text="검색" /> <!-- onAction="#SearchList" -->
+      <Separator layoutX="488.0" layoutY="380.0" prefHeight="4.0" prefWidth="397.0" />
+      <Label layoutX="661.0" layoutY="17.0" text="애견 정보" />
+      <Label layoutX="654.0" layoutY="399.0" text="보호자 정보" />
+      <Label layoutX="484.0" layoutY="458.0" text="보호자이름" />
+      <Label layoutX="704.0" layoutY="458.0" text="전화번호" />
+      <TextField fx:id="txtHost" layoutX="548.0" layoutY="454.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="124.0" />
+      <TextField fx:id="txtPhone" layoutX="771.0" layoutY="454.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="124.0" />
+      <Pane layoutX="701.0" layoutY="55.0">
+         <children>
+            <ImageView fx:id="imgImage" fitHeight="155.0" fitWidth="124.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutY="4.0" text="사진" />
+         </children>
+      </Pane>
+      <Label layoutX="487.0" layoutY="59.0" text="번호" />
+      <TextField fx:id="txtNum" layoutX="612.0" layoutY="55.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="60.0" />
+      <Pane layoutX="487.0" layoutY="286.0">
+         <children>
+            <Label layoutY="4.0" text="출생일" />
+            <TextField fx:id="dateBirth" layoutX="61.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="124.0" />
+         </children>
+      </Pane>
+      <Label layoutX="704.0" layoutY="290.0" text="등록일" />
+      <TextField fx:id="dateRegist" layoutX="766.0" layoutY="286.0" maxWidth="-Infinity" prefHeight="23.0" prefWidth="124.0" />
+   </children>
+</AnchorPane>
